@@ -15,7 +15,7 @@ jobs:
         DEBIAN_FRONTEND: noninteractive
       run: |
         sudo apt-get update
-        sudo apt-get -y install build-essential clang flex bison g++ gawk gcc-multilib g++-multilib gettext git libncurses5-dev libssl-dev python3-distutils rsync unzip zlib1g-dev libc6-dev-i386 xz-utils curl wget
+        sudo apt-get -y install build-essential clang flex bison g++ gawk gcc-multilib g++-multilib gettext git libncurses5-dev libssl-dev python3-setuptools rsync unzip zlib1g-dev libc6-dev-i386 xz-utils curl wget
 
     - name: Clone OpenWrt 25.12 source
       run: |
