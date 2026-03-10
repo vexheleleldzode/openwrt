@@ -45,6 +45,8 @@ jobs:
       working-directory: ./openwrt
       run: |
         echo -e "$(nproc) thread compile"
+        # 强制将 CI 变量设为 false，防止 Rust 1.90.0 编译脚本崩溃
+        export CI=false
         make -j$(nproc) || make -j1 V=s
 
     - name: Upload firmware directory
